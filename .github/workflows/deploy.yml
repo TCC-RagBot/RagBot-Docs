@@ -4,6 +4,8 @@ on:
     branches:
     - main
     - feature/setup-deploy  # Temporário para testar
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
