@@ -1,6 +1,6 @@
-site_name: 'RagBot - Documentação do Projeto'
-site_description: 'Documentação técnica completa do projeto RagBot - Trabalho de Conclusão de Curso em Engenharia de Software'
-site_author: 'Guilherme Santos'
+site_name: 'RAGBot - Sistema Inteligente de Chat'
+site_description: 'Documentação técnica completa do RAGBot - Sistema de chat baseado em RAG (Retrieval-Augmented Generation) para consultas sobre documentos PDF'
+site_author: 'Equipe RAGBot'
 site_url: 'https://TCC-RagBot.github.io/RagBot-Docs/'
 
 # Repository
@@ -127,42 +127,40 @@ nav:
   - 'Sobre o Projeto':
     - 'Visão Geral': 'sobre/index.md'
     - 'Objetivos': 'sobre/objetivos.md'
-    - 'Escopo': 'sobre/escopo.md'
+    - 'Escopo e Funcionalidades': 'sobre/escopo.md'
     - 'Cronograma': 'sobre/cronograma.md'
-  - 'Engenharia de Software':
+  - 'Arquitetura & Tecnologia':
     - 'Visão Geral': 'engenharia/index.md'
-    - 'Metodologia': 'engenharia/metodologia.md'
-    - 'Requisitos': 'engenharia/requisitos.md'
-    - 'User Stories': 'engenharia/user-stories.md'
-    - 'Arquitetura': 'engenharia/arquitetura.md'
+    - 'Arquitetura do Sistema': 'engenharia/arquitetura.md'
+    - 'Stack Tecnológica': 'desenvolvimento/tecnologias.md'
     - 'Modelagem de Dados': 'engenharia/modelagem.md'
+    - 'Requisitos Funcionais': 'engenharia/requisitos.md'
+    - 'User Stories': 'engenharia/user-stories.md'
   - 'Desenvolvimento':
-    - 'Visão Geral': 'desenvolvimento/index.md'
-    - 'Tecnologias': 'desenvolvimento/tecnologias.md'
-    - 'Setup Local': 'desenvolvimento/setup.md'
-    - 'API': 'desenvolvimento/api.md'
-    - 'Frontend': 'desenvolvimento/frontend.md'
-    - 'Backend': 'desenvolvimento/backend.md'
-  - 'Deploy':
-    - 'Guia de Deploy': 'deploy/index.md'
-    - 'Ambientes': 'deploy/ambientes.md'
-    - 'CI/CD': 'deploy/cicd.md'
-    - 'Monitoramento': 'deploy/monitoramento.md'
+    - 'Setup do Ambiente': 'desenvolvimento/setup.md'
+    - 'Backend (FastAPI)': 'desenvolvimento/backend.md'
+    - 'Frontend (Vue.js)': 'desenvolvimento/frontend.md'
+    - 'API Reference': 'desenvolvimento/api.md'
+    - 'Testes': 'desenvolvimento/testes.md'
   - 'Gestão do Projeto':
+    - 'Metodologia Ágil': 'engenharia/metodologia.md'
     - 'Sprints': 'gestao/sprints.md'
-    - 'Riscos': 'gestao/riscos.md'
-    - 'Custos': 'gestao/custos.md'
-    - 'Qualidade': 'gestao/qualidade.md'
+    - 'Gestão de Riscos': 'gestao/riscos.md'
+    - 'Análise de Custos': 'gestao/custos.md'
+    - 'Garantia de Qualidade': 'gestao/qualidade.md'
 
 # Extra
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/TCC-RagBot
-      name: GitHub
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/guilherme-santos
-      name: LinkedIn
+      name: Repositórios do Projeto
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/TCC-RagBot/RagBot-Back
+      name: Backend Repository
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/TCC-RagBot/RagBot-Front
+      name: Frontend Repository
   
   # Analytics (opcional)
   # analytics:
@@ -171,5 +169,5 @@ extra:
 
 # Copyright
 copyright: |
-  &copy; 2025 Guilherme Santos - 
-  <a href="#__consent">Alterar configurações de cookie</a>
+  &copy; 2025 Projeto RAGBot - TCC Engenharia de Software | 
+  <a href="#__consent">Configurações de cookie</a>
