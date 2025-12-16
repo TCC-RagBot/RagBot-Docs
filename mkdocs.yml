@@ -88,6 +88,7 @@ markdown_extensions:
   - toc:
       permalink: true
       title: "Nesta página"
+      toc_depth: 2
   - tables
   - pymdownx.arithmatex:
       generic: true
@@ -129,9 +130,9 @@ nav:
   
   - Arquitetura Técnica:
     - Arquitetura: Arquitetura/arquitetura.md
+    - Pipeline RAG: Arquitetura/rag-pipeline.md
     - Backend: Arquitetura/backend.md
     - Banco de Dados: Arquitetura/banco-dados.md
-    - Pipeline RAG: Arquitetura/rag-pipeline.md
   
   - Processo e Requisitos:
     - Metodologia: Processo/metodologia.md
