@@ -8,7 +8,7 @@ O projeto adotou uma abordagem mista de testes, combinando testes automatizados 
 
 A estratégia priorizou **testes de integração** para validar funcionalidades completas do sistema, especialmente o pipeline RAG, que é o core do projeto.
 
-**Justificativa:**
+A ideia era justamente testar a interação entre os principais componentes:
 
 - Verificar fluxos end-to-end funcionando
 - Garantir integração entre componentes (PyPDF, embeddings, pgvector, Gemini)
