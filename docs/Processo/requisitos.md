@@ -162,14 +162,5 @@ Durante o desenvolvimento, alguns requisitos evoluíram:
 - **RF05** (implícito): Sistema deve suportar múltiplas conversas simultâneas
 - **RNF05** (implícito): Sistema deve ser containerizado para facilitar deploy
 
-### Ajustes
-
-- **RF02**: Inicialmente previa apenas 1 documento, expandido para múltiplos
-- **RNF01**: Tempo de resposta ajustado de 3s para 5s após testes
-
-### Descartados
-
-- Upload via drag-and-drop no frontend (adiado para v2.0)
-- Autenticação de usuários (sistema decidiu ser anônimo)
 
 Essa flexibilidade é característica do desenvolvimento ágil, onde requisitos podem ser refinados conforme o aprendizado do time e feedback contínuo.

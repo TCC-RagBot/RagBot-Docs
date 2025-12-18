@@ -25,15 +25,14 @@ O time era composto por **2 desenvolvedores** que compartilhavam todas as respon
 - Revisão de código (code review)
 - Testes e validação
 
-## GitHub Projects - Kanban
+## GitHub Projects
 
-Para organizar o trabalho, utilizamos o **GitHub Projects** com quadro Kanban digital.
+Para organizar o trabalho, utilizamos o **GitHub Projects**.
 
 ### Estrutura do Quadro
 
-O Kanban foi dividido em 4 colunas principais:
+O quadro foi dividido em 3 colunas principais:
 
-- **Backlog:** Issues planejadas mas não iniciadas
 - **To Do:** Tarefas da sprint atual
 - **In Progress:** Issues em desenvolvimento
 - **Done:** Tarefas concluídas e revisadas
@@ -45,7 +44,7 @@ O Kanban foi dividido em 4 colunas principais:
 3. **Code Review:** PR aberto, parceiro revisa
 4. **Conclusão:** Após merge, issue vai para "Done"
 
-### Vantagens do Kanban
+### Vantagens
 
 - **Visibilidade:** Todos sabem o status de cada tarefa
 - **Organização:** Priorização clara do que fazer
@@ -66,121 +65,21 @@ O Kanban foi dividido em 4 colunas principais:
 - Estimativa de esforço
 - Definição de critérios de aceite
 
-### Daily (Assíncrono)
-
-Como a equipe era pequena e trabalhava de forma flexível, não realizávamos dailies formais. A comunicação acontecia via:
-
-- Comentários nas issues
-- Mensagens no WhatsApp/Discord
-- Commits descritivos no Git
-
-### Sprint Review
-
-**Quando:** Final de cada sprint
-
-**Atividades:**
-
-- Demonstração das funcionalidades desenvolvidas
-- Validação dos critérios de aceite
-- Testes das features implementadas
-- Feedback e ajustes necessários
-
-### Retrospectiva
-
-**Quando:** Final de cada sprint
-
-**Atividades:**
-
-- Discussão do que funcionou bem
-- Identificação de problemas encontrados
-- Definição de melhorias para a próxima sprint
-- Ajustes no processo de trabalho
-
 ## Organização por Issues
 
 Cada funcionalidade ou melhoria era representada por uma **issue** no GitHub.
-
-### Estrutura de uma Issue
-
-**Título:** Descrição clara e objetiva
-
-**Descrição:**
-
-- Contexto da necessidade
-- Funcionalidade esperada
-- Critérios de aceite
-- Referências (se aplicável)
-
-**Labels:**
-
-- `feature`: Nova funcionalidade
-- `bug`: Correção de erro
-- `enhancement`: Melhoria
-- `documentation`: Documentação
-
-**Assignee:** Developer responsável
-
-**Projeto:** Vinculada ao board do Kanban
 
 ### Exemplos de Issues
 
 - "Implementar busca semântica com pgvector"
 - "Criar interface de chat responsiva"
 - "Adicionar endpoint de upload de documentos"
-- "Configurar CI/CD com GitHub Actions"
-
-## Entregas Incrementais
-
-O desenvolvimento seguiu uma abordagem incremental:
-
-### Sprint 1-2: Fundação
-
-- Configuração do ambiente de desenvolvimento
-- Estrutura básica do backend (FastAPI)
-- Configuração do banco de dados (PostgreSQL + pgvector)
-- Prova de conceito do RAG
-
-### Sprint 3-4: Core do Sistema
-
-- Pipeline de ingestão de documentos
-- Busca vetorial com embeddings
-- Integração com Gemini AI
-- API REST funcional
-
-### Sprint 5-6: Interface e Integração
-
-- Interface web com Vue 3
-- Chat funcional com histórico
-- Upload de documentos via frontend
-- Integração frontend-backend completa
-
-### Sprint 7-8: Qualidade e Deploy
-
-- Testes automatizados
-- Containerização com Docker
-- Documentação técnica
-- Refinamentos e correções
-
-## Ferramentas Utilizadas
-
-### Gestão de Projeto
-
-- **GitHub Projects:** Kanban e tracking
-- **GitHub Issues:** Gerenciamento de tarefas
-- **GitHub Milestones:** Organização por sprints
 
 ### Comunicação
 
 - **WhatsApp/Discord:** Comunicação rápida
 - **GitHub Discussions:** Decisões técnicas
-- **Google Meet:** Reuniões síncronas
-
-### Desenvolvimento
-
-- **VS Code:** IDE principal
-- **Git:** Controle de versão
-- **Docker:** Ambiente isolado
-- **Postman:** Testes de API
+- **Discord:** Reuniões síncronas
 
 ## Adaptações do Scrum
 
