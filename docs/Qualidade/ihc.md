@@ -37,6 +37,8 @@ Uma das principais funcionalidades de UX é o **suporte a temas**, permitindo qu
 - Ideal para ambientes bem iluminados
 - Menor cansaço visual durante o dia
 
+![Modo Claro](../assets/claro.png)
+
 ### Modo Escuro
 
 **Características:**
@@ -45,6 +47,8 @@ Uma das principais funcionalidades de UX é o **suporte a temas**, permitindo qu
 - Texto claro (#F9FAFB)
 - Reduz fadiga ocular em ambientes escuros
 - Economiza bateria em telas OLED
+
+![Modo Escuro](../assets/escuro.png)
 
 ### Alternância de Tema
 
@@ -72,49 +76,7 @@ const toggleTheme = () => {
 - Feedback visual ao clicar
 - Transição suave entre temas
 
-## Boas Práticas de Usabilidade
-
-### Tamanho de Elementos Interativos
-
-**Botões e Áreas Clicáveis:**
-
-- Tamanho mínimo: 44x44px (padrão de acessibilidade)
-- Espaçamento adequado entre elementos
-- Áreas de toque generosas em mobile
-
-**Campo de Entrada:**
-
-- Altura confortável para digitação
-- Padding interno adequado
-- Largura responsiva
-
-### Cores e Contraste
-
-**Compatibilidade Visual:**
-
-- Contraste mínimo 4.5:1 para texto normal
-- Contraste 3:1 para textos grandes
-- Cores não dependem apenas de matiz
-
-**Paleta Harmoniosa:**
-
-- Azul para ações primárias (#3B82F6)
-- Cinza para elementos neutros
-- Verde para sucesso, vermelho para erros
-
-### Hierarquia Visual
-
-**Importância dos Elementos:**
-
-- Títulos maiores e mais destacados
-- Mensagens do chat com tamanhos distintos
-- Botões primários vs secundários diferenciados
-
-**Espaçamento:**
-
-- Whitespace adequado entre seções
-- Agrupamento lógico de elementos relacionados
-- Respiração visual evita poluição
+![Ícone](../assets/tema.png)
 
 ## Feedback Visual
 
@@ -239,83 +201,6 @@ A interface se adapta a **diferentes tamanhos de tela**, proporcionando boa expe
 - Transição suave ao rolar
 - Responsivo (hamburger em mobile)
 
-### Chat Interface
-
-**Layout:**
-
-```
-┌─────────────────────────┐
-│   Header (fixo)         │
-├─────────────────────────┤
-│                         │
-│   Área de Mensagens     │
-│   (scroll vertical)     │
-│                         │
-├─────────────────────────┤
-│   Input (fixo embaixo)  │
-└─────────────────────────┘
-```
-
-**Características:**
-
-- Scroll automático para última mensagem
-- Separação visual usuário/assistente
-- Timestamp em cada mensagem
-- Avatar simples (U/A)
-
-### Chat Bubbles
-
-**Mensagens do Usuário:**
-
-- Alinhadas à direita
-- Background azul
-- Texto branco
-
-**Mensagens do Assistente:**
-
-- Alinhadas à esquerda
-- Background cinza claro
-- Suporte a Markdown
-- Seção de fontes embaixo
-
-### Message Input
-
-**Campo de Texto:**
-
-- Multiline (textarea)
-- Placeholder descritivo
-- Botão de envio sempre visível
-- Enter para enviar (Shift+Enter para quebra)
-
-**Validações:**
-
-- Desabilita envio se vazio
-- Limite de caracteres (1000)
-- Feedback visual se exceder
-
-## Renderização de Markdown
-
-As respostas do assistente suportam **formatação Markdown** para melhor apresentação:
-
-**Elementos suportados:**
-
-- **Negrito** e *itálico*
-- Listas numeradas e bullets
-- Links clicáveis
-- Blocos de código
-- Títulos e subtítulos
-
-**Biblioteca:** marked.js
-
-**Configuração:**
-
-```typescript
-marked.setOptions({
-  breaks: true,      // Quebras de linha
-  gfm: true         // GitHub Flavored Markdown
-})
-```
-
 ## Animações e Transições
 
 **Transições Suaves:**
@@ -342,92 +227,6 @@ marked.setOptions({
 - Transições apenas em propriedades GPU (transform, opacity)
 - Evita reflow/repaint desnecessários
 - Animações desabilitadas se usuário preferir (prefers-reduced-motion)
-
-## Acessibilidade
-
-**Boas práticas implementadas:**
-
-**Semântica HTML:**
-
-```html
-<header>, <nav>, <main>, <article>
-<button>, <input>, <label>
-```
-
-**ARIA Labels:**
-
-```html
-<button aria-label="Alternar tema claro/escuro">
-<input aria-label="Digite sua pergunta">
-```
-
-**Navegação por Teclado:**
-
-- Tab navega entre elementos focáveis
-- Enter ativa botões
-- Escape fecha modals
-- Atalhos de teclado para ações comuns
-
-**Contraste:**
-
-- WCAG AA compliance
-- Texto sempre legível em ambos os temas
-
-## Consistência entre Páginas
-
-**Elementos Compartilhados:**
-
-- Header idêntico em todas as páginas
-- Mesma paleta de cores
-- Tipografia consistente
-- Espaçamentos padronizados
-
-**Componentes Reutilizáveis:**
-
-```
-shared/components/
-├── HeaderBar.vue
-├── LoadingSpinner.vue
-├── ErrorMessage.vue
-└── ConfirmationModal.vue
-```
-
-## Experiência de Primeira Utilização
-
-**Onboarding Implícito:**
-
-- Interface autoexplicativa
-- Placeholder com exemplo de pergunta
-- Feedback claro em cada ação
-- Sem necessidade de tutorial
-
-**Estado Vazio:**
-
-- Mensagem de boas-vindas no chat vazio
-- Instrução de como começar
-- Link para documentos disponíveis
-
-## Performance Percebida
-
-**Otimizações de UX:**
-
-**Loading States:**
-
-- Mostrar typing indicator antes da resposta chegar
-- Skeleton screens para listas
-- Desabilitar botões durante processamento
-
-**Otimistic UI:**
-
-- Mensagem do usuário aparece imediatamente
-- Assume que envio vai ter sucesso
-- Rollback se falhar
-
-**Lazy Loading:**
-
-- Componentes carregados sob demanda
-- Imagens com lazy loading
-- Code splitting por rotas
 
 ## Qualidade Visual
 
