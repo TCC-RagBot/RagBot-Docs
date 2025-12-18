@@ -2,82 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://TCC-RagBot.github.io/RagBot-Docs/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/desenvolvimento/api/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/desenvolvimento/backend/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/desenvolvimento/frontend/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/desenvolvimento/setup/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/desenvolvimento/tecnologias/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/arquitetura/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/metodologia/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/modelagem/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/requisitos/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/engenharia/user-stories/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/gestao/custos/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/gestao/qualidade/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/gestao/riscos/</loc>
-         <lastmod>2025-11-20</lastmod>
-    </url>
-    <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/gestao/sprints/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
          <loc>https://TCC-RagBot.github.io/RagBot-Docs/sobre/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/sobre/cronograma/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Arquitetura/arquitetura/</loc>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/sobre/escopo/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Arquitetura/backend/</loc>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
-         <loc>https://TCC-RagBot.github.io/RagBot-Docs/sobre/objetivos/</loc>
-         <lastmod>2025-11-20</lastmod>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Arquitetura/banco-dados/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Arquitetura/rag-pipeline/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Processo/git-flow/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Processo/metodologia/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Processo/requisitos/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Qualidade/devops/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Qualidade/ihc/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
+         <loc>https://TCC-RagBot.github.io/RagBot-Docs/Qualidade/testes/</loc>
+         <lastmod>2025-12-18</lastmod>
     </url>
 </urlset>
