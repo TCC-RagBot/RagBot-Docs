@@ -444,18 +444,16 @@ SourceChunk(
 
 | PDF | Páginas | Chunks | Tempo |
 |-----|---------|--------|-------|
-| Pequeno | 5 | 15 | ~3s |
-| Médio | 20 | 60 | ~10s |
-| Grande | 50 | 150 | ~25s |
+| Pequeno | 1 | 4 | ~0.3s |
+| Médio | 13 | 39 | ~1.5s |
+| Grande | 54 | 130 | ~5.2s |
 
 
 ### Respostas
 
-| PDF | Páginas | Chunks | Tempo |
-|-----|---------|--------|-------|
-| Pequeno | 5 | 15 | ~3s |
-| Médio | 20 | 60 | ~10s |
-| Grande | 50 | 150 | ~25s |
+| Tempo | Score de Similaridade |
+|-----|-----|
+| ~4.4s | ~0.5 |
 
 ## Tratamento de Casos Especiais
 
