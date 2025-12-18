@@ -68,19 +68,20 @@ Ao finalizar a funcionalidade:
 **Exemplo de descrição:**
 
 ```markdown
-## Descrição
-Implementa busca semântica usando pgvector e embeddings.
+## 🔗 Issue Relacionada
+Closes #3 
 
-## Mudanças
-- Adiciona repositório de busca vetorial
-- Integra sentence-transformers para embeddings
-- Cria índice HNSW no PostgreSQL
+## 📋 Descrição
+Foi finalizada a implementação da feature de resposta do chat, utilizando langChain para gerar as queries para o banco de dados, e a API do gemini para gerar a resposta final para o usuário
 
-## Testes
-- [x] Busca retorna chunks relevantes
-- [x] Performance < 200ms para 1000 documentos
-
-Closes #15
+## 🔧 Tipo de Alteração
+- [x] 🆕 **Feature** - Nova funcionalidade
+- [ ] 🐛 **Bug Fix** - Correção de bug
+- [ ] 📚 **Documentação** - Melhoria na documentação
+- [ ] 🧪 **Testes** - Adição ou correção de testes
+- [ ] ♻️ **Refatoração** - Melhoria no código sem mudança de funcionalidade
+- [ ] 🚀 **Deploy** - Relacionado a deploy e infraestrutura
+- [ ] 📦 **Dependências** - Atualização de dependências
 ```
 
 ### 4. Code Review
@@ -165,32 +166,30 @@ Implementar busca semântica com pgvector
 **Descrição:**
 
 ```markdown
-## Contexto
-O sistema precisa buscar documentos relevantes baseado na pergunta do usuário.
+## 📋 Descrição
+Configurar o ambiente de teste e implementar testes no fluxo de ingestão de documentos, fazendo validações
 
-## Tarefa
-Implementar busca vetorial usando pgvector e sentence-transformers.
+## 🔧 Tipo de Alteração
+<!-- Marque o tipo principal desta issue -->
+- [ ] 🆕 **Feature** - Nova funcionalidade
+- [ ] 🐛 **Bug Fix** - Correção de bug
+- [ ] 📚 **Documentação** - Melhoria na documentação
+- [x] 🧪 **Testes** - Adição ou correção de testes
+- [ ] ♻️ **Refatoração** - Melhoria no código sem mudança de funcionalidade
+- [ ] 🚀 **Deploy** - Relacionado a deploy e infraestrutura
+- [ ] 🔧 **Manutenção** - Tarefas de manutenção e limpeza
+- [ ] 📦 **Dependências** - Atualização de dependências
+- [ ] 🎨 **UI/UX** - Melhorias na interface
+- [ ] ⚡ **Performance** - Melhorias de performance
 
-## Critérios de Aceite
-- [ ] Embeddings são gerados para documentos
-- [ ] Busca retorna top-k chunks mais similares
-- [ ] Performance < 200ms para 1000 chunks
-
-## Referências
-- Documentação pgvector: [link]
-- Paper sobre embeddings: [link]
+##Tarefas
+- [ ] Configurar o ambiente de teste
+- [ ] Implementar testes unitários para garantir a eficácia do sistema
+- [ ] Verificar se o documento PDF é lido pelo python
+- [ ] Verificar se o documento é transformado em chunks pela biblioteca LangChain
+- [ ] Verificar se são gerados embeddings de 384 dimensões pelo modelo All-mini-LM-l6-v2
+- [ ] verificar se é enviado para o banco
 ```
-
-**Labels:**
-
-- `feature`: Nova funcionalidade
-- `bug`: Correção de erro
-- `enhancement`: Melhoria de algo existente
-- `documentation`: Atualização de docs
-
-**Milestone:** Sprint atual
-
-**Assignee:** Desenvolvedor responsável
 
 ### Vinculação ao Kanban
 
@@ -334,47 +333,3 @@ Funcionalidade era testada localmente antes de abrir PR.
 **Delete de Branches:**
 
 Branches mergeadas eram deletadas para manter repositório limpo.
-
-## Exemplo de Fluxo Completo
-
-### Cenário: Implementar Upload de Documentos
-
-**1. Planning:**
-
-- Issue #23 criada: "Implementar upload de PDFs"
-- Atribuída ao Dev A
-
-**2. Desenvolvimento:**
-
-```bash
-git checkout -b feature/document-upload
-# ... desenvolvimento ...
-git add .
-git commit -m "feat(api): adiciona endpoint de upload"
-git push origin feature/document-upload
-```
-
-**3. Pull Request:**
-
-- Dev A abre PR #24
-- Descreve as mudanças
-- Referencia issue #23
-
-**4. Code Review:**
-
-- Dev B revisa código
-- Testa localmente
-- Aprova PR
-
-**5. Merge:**
-
-- Dev A faz merge para main
-- Issue #23 fechada automaticamente
-- Branch deletada
-
-**6. Deploy:**
-
-- CI/CD roda testes
-- Deploy automático se tudo passar
-
-Esse fluxo garantiu que todas as funcionalidades passassem por dupla validação, mantendo alta qualidade do código e conhecimento compartilhado.
