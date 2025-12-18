@@ -88,6 +88,7 @@ markdown_extensions:
   - toc:
       permalink: true
       title: "Nesta página"
+      toc_depth: 2
   - tables
   - pymdownx.arithmatex:
       generic: true
@@ -123,31 +124,25 @@ markdown_extensions:
 
 # Navigation
 nav:
-  - 'Início': 'index.md'
-  - 'Sobre o Projeto':
-    - 'Visão Geral': 'sobre/index.md'
-    - 'Objetivos': 'sobre/objetivos.md'
-    - 'Escopo e Funcionalidades': 'sobre/escopo.md'
-    - 'Cronograma': 'sobre/cronograma.md'
-  - 'Arquitetura & Tecnologia':
-    - 'Visão Geral': 'engenharia/index.md'
-    - 'Arquitetura do Sistema': 'engenharia/arquitetura.md'
-    - 'Stack Tecnológica': 'desenvolvimento/tecnologias.md'
-    - 'Modelagem de Dados': 'engenharia/modelagem.md'
-    - 'Requisitos Funcionais': 'engenharia/requisitos.md'
-    - 'User Stories': 'engenharia/user-stories.md'
-  - 'Desenvolvimento':
-    - 'Setup do Ambiente': 'desenvolvimento/setup.md'
-    - 'Backend (FastAPI)': 'desenvolvimento/backend.md'
-    - 'Frontend (Vue.js)': 'desenvolvimento/frontend.md'
-    - 'API Reference': 'desenvolvimento/api.md'
-    - 'Testes': 'desenvolvimento/testes.md'
-  - 'Gestão do Projeto':
-    - 'Metodologia Ágil': 'engenharia/metodologia.md'
-    - 'Sprints': 'gestao/sprints.md'
-    - 'Gestão de Riscos': 'gestao/riscos.md'
-    - 'Análise de Custos': 'gestao/custos.md'
-    - 'Garantia de Qualidade': 'gestao/qualidade.md'
+  - Visão Geral:
+    - Introdução: index.md
+    - Objetivos e Justificativa: sobre.md
+  
+  - Arquitetura Técnica:
+    - Arquitetura: Arquitetura/arquitetura.md
+    - Pipeline RAG: Arquitetura/rag-pipeline.md
+    - Backend: Arquitetura/backend.md
+    - Banco de Dados: Arquitetura/banco-dados.md
+  
+  - Processo e Requisitos:
+    - Metodologia: Processo/metodologia.md
+    - Requisitos: Processo/requisitos.md
+    - Git Flow: Processo/git-flow.md
+  
+  - Qualidade e Operações:
+    - Testes: Qualidade/testes.md
+    - DevOps: Qualidade/devops.md
+    - Interface e UX: Qualidade/ihc.md
 
 # Extra
 extra:

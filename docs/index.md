@@ -1,194 +1,64 @@
-# RAGBot - Sistema Inteligente de Chat
+# RAGBot - Sistema de Chat Inteligente
 
-![RAGBot Banner](https://img.shields.io/badge/RAGBot-v1.0.0-blue?style=for-the-badge&logo=robot)
-![Python](https://img.shields.io/badge/Python-3.11+-3776ab?style=for-the-badge&logo=python&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-3.5+-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+## O Problema
 
----
+Na Universidade de Brasília, são realizadas dezenas de reuniões administrativas e acadêmicas mensalmente. Cada reunião gera uma ata com decisões importantes, deliberações e encaminhamentos.
 
-## 🚀 Visão Geral
+**O desafio:** localizar uma decisão específica entre centenas de atas é um processo manual, demorado e ineficiente. É necessário:
 
-O **RAGBot** é um sistema completo de chat inteligente desenvolvido como Trabalho de Conclusão de Curso (TCC) em Engenharia de Software. Utiliza a técnica **RAG (Retrieval-Augmented Generation)** para fornecer respostas precisas e contextualmente relevantes baseadas **exclusivamente** em documentos PDF carregados no sistema.
+- Identificar qual reunião tratou do assunto
+- Baixar e abrir o PDF da ata correspondente
+- Ler página por página até encontrar a informação
+- Repetir o processo se a informação estiver em múltiplas atas
 
-!!! abstract "O que é RAG?"
-    **Retrieval-Augmented Generation** é uma técnica de IA que combina:
-    
-    - 🔍 **Busca semântica** em uma base de conhecimento específica
-    - 🧠 **Geração de linguagem natural** com modelos LLM
-    - ⚡ **Respostas contextualmente precisas** baseadas apenas nos documentos fornecidos
+Esse processo consome tempo valioso de estudantes, professores e gestores que precisam consultar decisões anteriores.
 
-## ✨ Funcionalidades Principais
+## A Solução
 
-### 📄 Processamento Inteligente de Documentos
-- **Ingestão automática** de arquivos PDF
-- **Chunking inteligente** do conteúdo para otimizar a busca
-- **Geração de embeddings** vetoriais usando sentence-transformers
-- **Armazenamento eficiente** em PostgreSQL com pgvector
+O **RAGBot** é um sistema de chat inteligente que utiliza técnicas de Recuperação Aumentada por Geração (RAG) para responder perguntas sobre documentos da UnB em linguagem natural.
 
-### 💬 Chat Contextual Avançado
-- **Interface estilo ChatGPT** moderna e responsiva
-- **Busca semântica** nos documentos carregados
-- **Respostas precisas** usando Google Gemini AI
-- **Modo claro/escuro** com persistência de preferências
+### Como funciona
 
-### 🔒 Segurança e Confiabilidade
-- **Respostas baseadas apenas** no conteúdo dos documentos
-- **Não inventa informações** não presentes nos documentos
-- **Transparência total** sobre as fontes utilizadas
-- **API RESTful** com validação rigorosa
+1. **Ingestão de Documentos**: O sistema processa e armazena PDFs das atas em um banco de dados vetorial
+2. **Busca Semântica**: Quando o usuário faz uma pergunta, o sistema busca os trechos mais relevantes nos documentos
+3. **Geração de Resposta**: Uma IA analisa os trechos encontrados e gera uma resposta natural, sempre baseada exclusivamente no conteúdo dos documentos
 
-## 🏗️ Arquitetura do Sistema
+### Principais características
 
-```mermaid
-graph TB
-    subgraph "Frontend (Vue.js 3)"
-        A[Interface de Chat]
-        B[Upload de Documentos]
-        C[Gerenciamento de Temas]
-    end
-    
-    subgraph "Backend (FastAPI)"
-        D[API REST]
-        E[Serviço de Chat]
-        F[Serviço de Documentos]
-        G[Processamento RAG]
-    end
-    
-    subgraph "Banco de Dados"
-        H[PostgreSQL + pgvector]
-        I[Documentos]
-        J[Chunks]
-        K[Embeddings]
-    end
-    
-    subgraph "IA & Modelos"
-        L[Google Gemini AI]
-        M[sentence-transformers]
-        N[LangChain]
-    end
-    
-    A --> D
-    B --> D
-    D --> E
-    D --> F
-    E --> G
-    F --> G
-    G --> H
-    G --> L
-    G --> M
-    G --> N
-    H --> I
-    H --> J
-    H --> K
-```
+- **Respostas precisas**: Baseadas apenas no conteúdo dos documentos carregados
+- **Interface intuitiva**: Design limpo estilo ChatGPT, fácil de usar
+- **Citação de fontes**: Cada resposta mostra os documentos utilizados
+- **Modo anônimo**: Não requer autenticação para uso básico
 
-## 📊 Stack Tecnológica Completa
+## Stack Tecnológica
 
-=== "Backend"
-    
-    | Tecnologia | Versão | Propósito |
-    |------------|--------|-----------|
-    | **Python** | 3.11+ | Linguagem principal |
-    | **FastAPI** | 0.115+ | Framework web moderno |
-    | **LangChain** | 0.3.7 | Orquestração de IA |
-    | **Pydantic** | 2.10+ | Validação de dados |
-    | **PostgreSQL** | 15+ | Banco de dados |
-    | **pgvector** | 0.3.6 | Operações vetoriais |
+### Frontend
+- **Vue 3** + **TypeScript**: Interface moderna e reativa
+- **Tailwind CSS**: Design system responsivo
+- **Vite**: Build tool de alta performance
 
-=== "Frontend"
+### Backend
+- **Python 3.11** + **FastAPI**: API REST rápida e robusta
+- **LangChain**: Orquestração do pipeline RAG
+- **Google Gemini AI**: Modelo de linguagem para geração de respostas
 
-    | Tecnologia | Versão | Propósito |
-    |------------|--------|-----------|
-    | **Vue.js** | 3.5+ | Framework reativo |
-    | **TypeScript** | 5.9+ | JavaScript tipado |
-    | **Vite** | 7.1+ | Build tool moderna |
-    | **Tailwind CSS** | 3.4+ | Framework de CSS |
-    | **Pinia** | 3.0+ | Gerenciamento de estado |
-    | **Marked** | 16.3+ | Renderização Markdown |
+### Dados
+- **PostgreSQL 15**: Banco de dados relacional
+- **pgvector**: Extensão para busca vetorial
+- **sentence-transformers**: Geração de embeddings semânticos
 
-=== "IA & Modelos"
+## Repositórios
 
-    | Tecnologia | Versão | Propósito |
-    |------------|--------|-----------|
-    | **Google Gemini** | API v1 | Modelo de linguagem |
-    | **sentence-transformers** | 3.3.1 | Geração de embeddings |
-    | **all-MiniLM-L6-v2** | - | Modelo de embeddings |
-    | **pypdf** | 5.1.0 | Processamento de PDF |
+O projeto está organizado em três repositórios no GitHub:
 
-## 🎯 Casos de Uso
+- [**RagBot-Back**](https://github.com/TCC-RagBot/RagBot-Back) - Backend API
+- [**RagBot-Front**](https://github.com/TCC-RagBot/RagBot-Front) - Interface Web
+- [**RagBot-Docs**](https://github.com/TCC-RagBot/RagBot-Docs) - Documentação
 
-### 🏢 Organizações
-- **Consulta de políticas** internas e documentos corporativos
-- **Base de conhecimento** para equipes de suporte
-- **Automatização de FAQ** baseada em manuais
+## Público-Alvo
 
-### 🎓 Instituições Educacionais
-- **Consulta de regulamentos** e normas acadêmicas
-- **Suporte estudantil** automatizado
-- **Pesquisa em documentos** institucionais
+O sistema foi desenvolvido para atender a comunidade acadêmica da UnB:
 
-### 📚 Pesquisa e Desenvolvimento
-- **Análise de documentos** técnicos e científicos
-- **Extração de informações** específicas
-- **Síntese inteligente** de conteúdo
-
-## 🚀 Quick Start
-
-### 1. Clone os Repositórios
-```bash
-# Backend
-git clone https://github.com/TCC-RagBot/RagBot-Back.git
-cd RagBot-Back
-
-# Frontend (em outro terminal)
-git clone https://github.com/TCC-RagBot/RagBot-Front.git
-cd RagBot-Front
-```
-
-### 2. Configure o Backend
-```bash
-cd RagBot-Back
-python -m venv venv
-.\venv\Scripts\Activate.ps1  # Windows
-pip install -r requirements.txt
-docker-compose up -d  # PostgreSQL
-python -m app.main    # Inicia API
-```
-
-### 3. Configure o Frontend
-```bash
-cd RagBot-Front
-npm install
-npm run dev  # Inicia interface
-```
-
-### 4. Acesse o Sistema
-- **Frontend**: http://localhost:5173
-- **API Docs**: http://localhost:8000/docs
-- **Health Check**: http://localhost:8000/health
-
-!!! tip "Próximos Passos"
-    1. 📖 Leia o [Setup Detalhado](desenvolvimento/setup.md) para configuração completa
-    2. 🏗️ Explore a [Arquitetura](engenharia/arquitetura.md) do sistema
-    3. 🔧 Consulte a [API Reference](desenvolvimento/api.md) para integração
-    4. 📋 Veja os [Requisitos](engenharia/requisitos.md) funcionais
-
-## 🎓 Contexto Acadêmico
-
-Este projeto foi desenvolvido como **Trabalho de Conclusão de Curso** no curso de **Engenharia de Software**, demonstrando competências em:
-
-- ✅ **Arquitetura de Software** moderna e escalável
-- ✅ **Metodologias Ágeis** com Scrum e Kanban  
-- ✅ **Inteligência Artificial** aplicada com RAG
-- ✅ **DevOps e CI/CD** com Docker e GitHub Actions
-- ✅ **Engenharia de Requisitos** e modelagem UML
-- ✅ **Qualidade de Software** com testes automatizados
-
----
-
-!!! success "Sistema em Produção"
-    O RAGBot está **totalmente funcional** e pronto para uso. Consulte a documentação completa para implementar em seu ambiente.
-
-**Desenvolvido por:** Equipe RAGBot | **Curso:** Engenharia de Software | **Ano:** 2025
+- **Estudantes**: Consultar decisões sobre cursos, disciplinas e calendário acadêmico
+- **Professores**: Verificar deliberações sobre projetos e questões acadêmicas
+- **Gestores**: Acessar rapidamente decisões administrativas anteriores
